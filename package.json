@@ -1,9 +1,9 @@
 {
-  "name": "personal-next-boilerplate",
+  "name": "pocketdex",
   "version": "0.1.0",
   "private": true,
   "author": "Abdul malik <up2dul@gmail.com>",
-  "description": "My personal Next.js + Typescript + Tailwind CSS boilerplate",
+  "description": "Simple pokemon apps",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
