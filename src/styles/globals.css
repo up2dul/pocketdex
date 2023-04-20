@@ -16,3 +16,84 @@
     @apply text-secondary transition-colors;
   }
 }
+
+/* Pokemon types styling */
+.bug {
+  @apply bg-[#a8b820] text-dark;
+}
+
+.dark {
+  @apply bg-[#705848] text-light;
+}
+
+.dragon {
+  @apply bg-[#7038f8] text-light;
+}
+
+.fire {
+  @apply bg-[#f08030] text-dark;
+}
+
+.electric {
+  @apply bg-[#f8d030] text-[#312d21];
+}
+
+.fairy {
+  @apply bg-[#ee99Ac] text-[#480010];
+}
+
+.fighting {
+  @apply bg-[#c03028] text-light;
+}
+
+.flying {
+  @apply bg-[#a890f0] text-dark;
+}
+
+.ghost {
+  @apply bg-[#705898] text-light;
+}
+
+.grass {
+  @apply bg-[#78c850] text-dark;
+}
+
+.ground {
+  @apply bg-[#e0c068] text-[#3d341c];
+}
+
+.ice {
+  @apply bg-[#98d8d8] text-[#355252];
+}
+
+.normal {
+  @apply bg-[#a8a878] text-light;
+}
+
+.poison {
+  @apply bg-[#a040a0] text-light;
+}
+
+.psychic {
+  @apply bg-[#f85888] text-light;
+}
+
+.rock {
+  @apply bg-[#b8a038] text-light;
+}
+
+.shadow {
+  @apply bg-[rgb(100,100,100)] text-light;
+}
+
+.steel {
+  @apply bg-[#b8b8d0] text-[#323243];
+}
+
+.water {
+  @apply bg-[#6890f0] text-light;
+}
+
+.unknown {
+  @apply bg-[#68a090] text-[#004c36]; 
+}
