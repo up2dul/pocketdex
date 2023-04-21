@@ -2,7 +2,7 @@ import { useContext } from 'react';
 
 import { PokemonContext } from '@/contexts/PokemonContext';
 import { type SavedPokemonContext } from '@/lib/types';
-import SavedCard from '@/components/SavedCard';
+import SavedCard from '@/components/common/SavedCard';
 
 const Saved = () => {
   const { savedPokemon, setSavedPokemon } = useContext(

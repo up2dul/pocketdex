@@ -3,9 +3,9 @@ import { type PokeAPI } from 'pokeapi-types';
 
 import useInfiniteScroll from '@/hooks/use-infinite-scroll';
 import useSearch from '@/hooks/use-search';
-import Button from '@/components/Button';
-import Card from '@/components/Card';
-import SearchBar from '@/components/SearchBar';
+import Button from '@/components/common/Button';
+import Card from '@/components/common/Card';
+import SearchBar from '@/components/common/SearchBar';
 
 const Home = ({ pokemonList }: { pokemonList: PokeAPI.NamedAPIResource[] }) => {
   const { filteredList: searchedList, handleSearch } = useSearch(
