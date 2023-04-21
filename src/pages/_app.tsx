@@ -2,10 +2,13 @@ import { type AppType } from 'next/app';
 
 import Layout from '@/components/Layout';
 import '@/styles/globals.css';
+import PokemonContextProvider from '@/contexts/PokemonContext';
 
 const MyApp: AppType = ({ Component, pageProps }) => (
   <Layout>
-    <Component {...pageProps} />
+    <PokemonContextProvider>
+      <Component {...pageProps} />
+    </PokemonContextProvider>
   </Layout>
 );
 
