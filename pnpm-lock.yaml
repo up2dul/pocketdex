@@ -60,6 +60,9 @@ devDependencies:
   lint-staged:
     specifier: ^13.1.2
     version: 13.1.2
+  pokeapi-types:
+    specifier: ^0.0.1
+    version: 0.0.1
   postcss:
     specifier: ^8.4.14
     version: 8.4.21
@@ -2666,6 +2669,10 @@ packages:
   /pify@2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /pokeapi-types@0.0.1:
+    resolution: {integrity: sha512-lfmc47oT3Pg3RQDxFN6s0DXSYsfvdwpExXlKeQYyfmL3E43JIpOt/08JuvORTEox3wek5Q6MtEnaMWJBGCt8dA==}
     dev: true
 
   /postcss-import@14.1.0(postcss@8.4.21):
