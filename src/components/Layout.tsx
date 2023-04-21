@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
 
     <Header />
 
-    <main className='mt-10 px-12 sm:px-24 md:px-32 lg:px-44 xl:px-48'>
+    <main className='my-10 px-12 sm:px-24 md:px-32 lg:px-44 xl:px-48'>
       {children}
     </main>
   </>
