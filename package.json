@@ -6,6 +6,7 @@
   "description": "Simple pokemon apps",
   "scripts": {
     "build": "next build",
+    "export": "next export",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
