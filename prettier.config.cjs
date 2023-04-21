@@ -12,6 +12,7 @@ module.exports = {
     '',
     '^types$',
     '^@/lib/(.*)$',
+    '^@/hooks/(.*)$',
     '^@/components/(.*)$',
     '^@/styles/(.*)$',
     '^[./]',
