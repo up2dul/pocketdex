@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
+import { type PokeAPI } from 'pokeapi-types';
 
-import { type IPokemon } from '@/lib/types';
-import Button from './Button';
+import SaveDialog from './SaveDialog';
 
 type CardProps = {
   pokemonName: string;
@@ -11,7 +11,10 @@ type CardProps = {
 };
 
 const Card = ({ pokemonName, url }: CardProps) => {
-  const [pokemon, setPokemon] = useState<IPokemon>();
+  const [pokemon, setPokemon] = useState<PokeAPI.Pokemon>();
+  const imageSrc = `https://img.pokemondb.net/artwork/large/${
+    pokemonName || 'bulbasaur'
+  }.jpg`;
   const fixedHeight = (pokemon?.height || 0) / 10;
   const fixedWeight = (pokemon?.weight || 0) / 10;
 
@@ -21,7 +24,7 @@ const Card = ({ pokemonName, url }: CardProps) => {
 
   const getPokemonData = async () => {
     try {
-      const response = await axios.get<IPokemon>(url);
+      const response = await axios.get<PokeAPI.Pokemon>(url);
       const pokemonData = response.data;
       setPokemon(pokemonData);
     } catch (err) {
@@ -32,9 +35,7 @@ const Card = ({ pokemonName, url }: CardProps) => {
   return (
     <article className='rounded-md shadow-lg p-4 flex flex-col justify-between'>
       <Image
-        src={`https://img.pokemondb.net/artwork/large/${
-          pokemonName || 'bulbasaur'
-        }.jpg`}
+        src={imageSrc}
         alt={pokemonName}
         width={130}
         height={130}
@@ -61,7 +62,13 @@ const Card = ({ pokemonName, url }: CardProps) => {
           ))}
         </div>
 
-        <Button isWFull>Save</Button>
+        <SaveDialog
+          name={pokemonName}
+          imageSrc={imageSrc}
+          height={fixedHeight}
+          weight={fixedWeight}
+          types={pokemon?.types}
+        />
       </div>
     </article>
   );
