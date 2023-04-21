@@ -37,7 +37,7 @@ const Home = ({ pokemonList }: { pokemonList: PokeAPI.NamedAPIResource[] }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const response = await axios.get<PokeAPI.NamedAPIResourceList>(
     'https://pokeapi.co/api/v2/pokemon?offset=0&limit=300',
   );
